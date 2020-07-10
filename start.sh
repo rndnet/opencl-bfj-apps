@@ -1,1 +1,2 @@
-podman run -it --rm docker.io/rndnet/opencl-bfj-apps:microseism3d  bash 
+#!/bin/bash
+podman run --rm -it --device=/dev/dri:/dev/dri docker.io/rndnet/opencl-bfj-apps:microseism1d  bash 
