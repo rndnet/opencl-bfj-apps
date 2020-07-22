@@ -13,7 +13,9 @@ mkdir -p build/files
 if [ ! -f build/files/${AMD_DRV} ]; then
     echo
     echo "Download AMD drivers: ${AMD_DRV}"
-    wget https://media.githubusercontent.com/media/rndnet/opencl-bfj/master/files/${AMD_DRV} -O build/files/${AMD_DRV}
+    referer="https://www.amd.com/en/support/kb/release-notes/rn-rad-lin-20-20-unified"
+    download="https://drivers.amd.com/drivers/linux/${AMD_DRV}"
+    wget ${download} --referer ${referer}  -O build/files/${AMD_DRV}
 fi 
 
 cd build
