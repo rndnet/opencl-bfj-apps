@@ -40,6 +40,7 @@ rm -rv $DF Dockerfile_origin
 
 echo
 echo Upload images
+podman login docker.io
 podman push ${REP}:${TAG}-${VER} 
 podman push ${REP}:${TAG}
 
