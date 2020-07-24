@@ -22,7 +22,7 @@ $CM build -t ${REP}:${TAG}-${VER} -t ${REP}:${TAG}  --no-cache -f Dockerfile
 
 echo
 echo Upload images
-$CM login
+$CM login docker.io
 $CM push ${REP}:${TAG}-${VER} 
 $CM push ${REP}:${TAG}
 
