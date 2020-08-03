@@ -13,8 +13,8 @@ podman pull docker.io/rndnet/opencl-bfj
 
 echo
 echo "Build ....."
-podman build -t ${REP}:${TAG}-${VER} -t ${REP}:${TAG} -v ${HOME}/.ssh:/root/.ssh --no-cache -f $DF  #use git clone git: ... for microsesm library
-#podman build -t ${REP}:${TAG}-${VER} -t ${REP}:${TAG}                            --no-cache -f $DF  #use git clone https: ... for microsesm library
+podman build -t ${REP}:${TAG}-${VER} -t ${REP}:${TAG} -v ${HOME}/.ssh:/root/.ssh --no-cache -f Dockerfile  #use git clone git: ... for microsesm library
+#podman build -t ${REP}:${TAG}-${VER} -t ${REP}:${TAG}                            --no-cache -f Dockerfile  #use git clone https: ... for microsesm library
 
 echo
 echo Upload images
