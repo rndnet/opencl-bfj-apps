@@ -1,3 +1,3 @@
-# Microsesm3d Applications for nvidia cards
+# Microsesm1d Applications for nvidia cards
 
- https://gitlab.com/modernseismic/rnd/microseism.git
+https://gitlab.com/modernseismic/rnd/microseism.git
