@@ -17,7 +17,7 @@ VER=`date +"%Y-%m-%d"`
 
 echo
 echo "Build ....."
-$CM build -t ${REP}:${TAG}-${VER} -t ${REP}:${TAG}  -f Dockerfile
+$CM build -t ${REP}:${TAG}-${VER} -t ${REP}:${TAG}   -v ${HOME}/.ssh:/root/.ssh --no-cache -f Dockerfile
 
 echo
 echo Upload images
