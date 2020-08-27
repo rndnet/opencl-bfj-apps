@@ -2,7 +2,7 @@ FROM docker.io/nvidia/cuda:11.0-base
 
 ENV PYTHONPATH=/ms
 
-RUN apt-get update && apt-get install -y clinfo libnvidia-compute-450 git g++ make cmake python3 python3-pip libboost-all-dev libhdf5-serial-dev libpugixml-dev libeigen3-dev libpython3-dev libconfig++-dev opencl-headers
+RUN apt-get update && DEBIAN_FRONTEND="noninteractive" apt-get install -y clinfo libnvidia-compute-450 git g++ make cmake python3 python3-pip libboost-all-dev libhdf5-serial-dev libpugixml-dev libeigen3-dev libpython3-dev libconfig++-dev opencl-headers
 
 RUN pip3 install -r https://server1.rndnet.net/static/simple/bfj/requirements.txt && pip3 install --index-url https://server1.rndnet.net/static/simple bfj
 
