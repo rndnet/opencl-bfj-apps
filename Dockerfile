@@ -21,3 +21,5 @@ RUN cd / &&  if [ -e ~/.ssh/id_rsa ]; then git clone --recursive git@gitlab.com:
 RUN CC=mpicc CXX=mpicxx cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-L/usr/lib/x86_64-linux-gnu/hdf5/serial/ -I/usr/include/hdf5/serial -DCL_TARGET_OPENCL_VERSION=120" -DOpenCL_LIBRARY=/lib/x86_64-linux-gnu/libOpenCL.so.1 -Bmicroseism-build microseism  && \
     cmake --build microseism-build -- microseism && \
     cp microseism-build/microseism /usr/local/bin && rm -r microseism microseism-build
+
+COPY test /test
